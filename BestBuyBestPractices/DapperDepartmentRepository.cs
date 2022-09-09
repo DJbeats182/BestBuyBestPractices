@@ -26,5 +26,11 @@ namespace BestBuyBestPractices
             _conn.Execute("INSERT INTO departments (NAME) VALUES (@name)",
                 new {name = name});
         }
+
+        public void DeleteDepartment(int depoID)
+        {
+            _conn.Execute("DELETE FROM departments WHERE (NAME) VALUES (@departmentID)",
+                new { name = depoID });
+        }
     }
 }
